@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContractGeneratorComponent } from './contract-generator/contract-generator.component';
-import { AddressComponent } from './contract-generator/address/address.component';
+import { ContractLineComponent } from './contract-generator/contractline/contractline.component';
 import { ColorsComponent } from './contract-generator/colors/colors.component';
 import { BasicInfoComponent } from './contract-generator/basic-info/basic-info.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   declarations: [
     ContractGeneratorComponent,
-    AddressComponent,
+    ContractLineComponent,
     BasicInfoComponent,
     ColorsComponent,
   ],

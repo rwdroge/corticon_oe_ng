@@ -1,17 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormGroupDirective } from '@angular/forms';
 import { ItemService } from '../../../item.service';
-import { Observable } from 'rxjs/internal/Observable';
-import { of } from 'rxjs/internal/observable/of';
 import { Item } from '../../item';
-import { ListItemHarnessFilters } from '@angular/material/list/testing';
-
 @Component({
-  selector: 'app-address',
-  templateUrl: './address.component.html',
-  styleUrls: ['./address.component.css'],
+  selector: 'app-contractline',
+  templateUrl: './contractline.component.html',
+  styleUrls: ['./contractline.component.css'],
 })
-export class AddressComponent implements OnInit {
+export class ContractLineComponent implements OnInit {
   @Input() formGroupName: string;
   form: FormGroup;
   item: Item;
@@ -23,8 +19,6 @@ export class AddressComponent implements OnInit {
     this.itemService
       .getItems()
       .subscribe((items: Item[]) => (this.items = items));
-
-    console.log(this.items);
   }
 
   ngOnInit(): void {
