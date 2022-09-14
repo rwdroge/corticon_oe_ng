@@ -9,6 +9,7 @@ import { FormGroup, FormGroupDirective } from '@angular/forms';
 export class ContractComponent implements OnInit {
   @Input() formGroupName: string;
   form: FormGroup;
+  contractDate: any;
 
   constructor(private rootFormGroup: FormGroupDirective) {}
 

@@ -26,10 +26,11 @@ export class ContractLineComponent implements OnInit {
   }
 
   changeItem(e: any) {
-    console.log(e.target.value);
-    this.itemName?.setValue(e.target.value, {
+    this.item = this.items[e.target.value];
+    this.itemName?.setValue(e.target.value['ID'], {
       onlySelf: true,
     });
+    console.log(this.item);
   }
   // Access formcontrols getter
   get itemName() {

@@ -2,40 +2,55 @@
   <mat-card class="form-container">
     <mat-card-title>New Contract</mat-card-title>
 
-    <!-- First name -->
+    <!-- Contract date -->
     <mat-form-field>
-      <mat-label>First name</mat-label>
-      <input matInput placeholder="Ex. Jane" formControlName="firstName" />
-    </mat-form-field>
-    <!-- /First name -->
-
-    <!-- Last name -->
-    <mat-form-field>
-      <mat-label>Last name</mat-label>
-      <input matInput placeholder="Ex. Doe" formControlName="lastName" />
-    </mat-form-field>
-    <!-- /Last name -->
-
-    <!-- email -->
-    <mat-form-field>
-      <mat-label>e-mail</mat-label>
+      <mat-label>Contract date</mat-label>
       <input
-        type="email"
         matInput
-        placeholder="Ex. jane@doe.com"
-        formControlName="email"
+        [matDatepicker]="contractDate"
+        formControlName="contractDate"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="contractDate"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #contractDate></mat-datepicker>
+    </mat-form-field>
+    <!-- /Contract date -->
+
+    <!-- Duration years -->
+    <mat-form-field>
+      <mat-label>Duration Years</mat-label>
+      <input
+        matInput
+        type="number"
+        placeholder="0"
+        formControlName="durationYears"
       />
     </mat-form-field>
-    <!-- /email -->
+    <!-- /Duration years -->
+
+    <!-- Risk factor -->
+    <mat-form-field>
+      <mat-label>Risk factor</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="Ex. jane@doe.com"
+        formControlName="riskFactor"
+      />
+    </mat-form-field>
+    <!-- /Risk Factor -->
 
     <!-- age -->
     <mat-form-field>
-      <mat-label>Age</mat-label>
+      <mat-label>Total startup costs</mat-label>
       <input
         type="number"
         matInput
         placeholder="Ex. 43"
-        formControlName="age"
+        formControlName="totalStartupCosts"
       />
     </mat-form-field>
     <!-- /age -->

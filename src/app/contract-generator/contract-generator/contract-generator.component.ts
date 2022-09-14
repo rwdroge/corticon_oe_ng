@@ -13,36 +13,29 @@ export class ContractGeneratorComponent implements OnInit, OnDestroy {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    console.log('whatever');
     this.userForm = this.fb.group({
-      basicInfo: this.fb.group({
-        firstName: [],
-        lastName: [],
-        email: [],
-        age: [],
+      contract: this.fb.group({
+        contractDate: [],
+        durationYears: [],
+        riskFactor: [],
+        totalStartupCosts: [],
+        type: [],
+        yearlyContractAmount: [],
+        yearlyMaintenanceAmount: [],
       }),
-      address: this.fb.group({
+      contractline: this.fb.group({
         itemName: [],
-        street: [],
-        number: [],
-        postal: [],
-        company: [],
+        quantity: [],
+        price: [],
+        yearlyContractAmount: [],
+        yearlyMaintenanceAmount: [],
+        yearlyRentalAmount: [],
+        yearlyRentInclMaintenance: [],
+        yearlyRiskSurcharge: [],
+        yearlyStartupCosts: [],
       }),
       colors: this.fb.array(['red', 'green', 'blue']),
     });
-
-    const companyFormControl = this.userForm.get('address.company');
-
-    this.ageValueChanges = this.userForm
-      .get('basicInfo.age')
-      .valueChanges.subscribe((age) => {
-        if (age > 18) {
-          companyFormControl.setValidators(Validators.required);
-        } else {
-          companyFormControl.clearValidators();
-        }
-        companyFormControl.updateValueAndValidity();
-      });
   }
 
   ngOnDestroy(): void {

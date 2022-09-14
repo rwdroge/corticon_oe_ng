@@ -1,14 +1,6 @@
 <form autocomplete="off" [formGroup]="form">
   <mat-card class="form-container">
-    <mat-card-title>Address Details</mat-card-title>
-
-    <!-- Street -->
-    <mat-form-field>
-      <mat-label>Street</mat-label>
-      <input matInput placeholder="Ex. street name" formControlName="street" />
-    </mat-form-field>
-    <!-- /Street -->
-
+    <mat-card-title>Contract Lines</mat-card-title>
     <select
       class="custom-select mb-3"
       (change)="changeItem($event)"
@@ -19,34 +11,75 @@
         {{ item.ITEM }}
       </option>
     </select>
-
     <!-- Street -->
     <mat-form-field>
-      <mat-label>Number</mat-label>
+      <mat-label>Quantity</mat-label>
       <input
-        type="number"
         matInput
-        placeholder="Ex. 12"
-        formControlName="number"
+        type="number"
+        placeholder="1"
+        formControlName="quantity"
       />
     </mat-form-field>
     <!-- /Street -->
-
     <!-- Street -->
     <mat-form-field>
-      <mat-label>Postal</mat-label>
-      <input matInput placeholder="Ex. 12345" formControlName="postal" />
+      <mat-label>Price</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="0.00"
+        formControlName="price"
+        value=""
+      />
     </mat-form-field>
     <!-- /Street -->
-
-    <!-- Company -->
+    <!-- Street -->
     <mat-form-field>
-      <mat-label>Company</mat-label>
-      <input matInput placeholder="Ex. Acme" formControlName="company" />
-      <mat-hint align="start" *ngIf="form.get('company').invalid">
-        <strong>Field is required</strong>
-      </mat-hint>
+      <mat-label>Yearly contract amount</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="0.00"
+        formControlName="yearlyContractAmount"
+      />
     </mat-form-field>
-    <!-- /Company -->
+    <!-- /Street -->
+    <mat-form-field>
+      <mat-label>Yearly maintenance amount</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="0.00"
+        formControlName="yearlyMaintenanceAmount"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Yearly rental amount</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="0.00"
+        formControlName="yearlyRentalAmount"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Yearly risk surcharge</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="0.00"
+        formControlName="yearlyRiskSurcharge"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Yearly startup costs</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="0.00"
+        formControlName="yearlyStartupCosts"
+      />
+    </mat-form-field>
   </mat-card>
 </form>

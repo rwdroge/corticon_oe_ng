@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { ItemService } from './contract-generator/services/item.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   providers: [ItemService],
@@ -16,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     AngularMaterialModule,
     HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   declarations: [
     ContractGeneratorComponent,
