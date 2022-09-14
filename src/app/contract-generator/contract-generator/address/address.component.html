@@ -9,6 +9,17 @@
     </mat-form-field>
     <!-- /Street -->
 
+    <select
+      class="custom-select mb-3"
+      (change)="changeItem($event)"
+      formControlName="itemName"
+    >
+      <option value="">Choose Item</option>
+      <option *ngFor="let item of items" [ngValue]="item">
+        {{ item.ITEM }}
+      </option>
+    </select>
+
     <!-- Street -->
     <mat-form-field>
       <mat-label>Number</mat-label>
