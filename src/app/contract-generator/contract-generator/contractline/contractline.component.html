@@ -3,10 +3,8 @@
     <mat-card-title>Contract Lines</mat-card-title>
     <select
       class="custom-select mb-3"
-      (change)="changeItem($event)"
-      formControlName="itemName"
+      formControlName="item"
     >
-      <option value="">Choose Item</option>
       <option *ngFor="let item of items" [ngValue]="item">
         {{ item.ITEM }}
       </option>
@@ -19,6 +17,7 @@
         type="number"
         placeholder="1"
         formControlName="quantity"
+        value="1"
       />
     </mat-form-field>
     <!-- /Street -->
@@ -30,7 +29,7 @@
         matInput
         placeholder="0.00"
         formControlName="price"
-        value=""
+        [value]=""
       />
     </mat-form-field>
     <!-- /Street -->

@@ -24,7 +24,7 @@ export class ContractGeneratorComponent implements OnInit, OnDestroy {
         yearlyMaintenanceAmount: [],
       }),
       contractline: this.fb.group({
-        itemName: [],
+        item: [],
         quantity: [],
         price: [],
         yearlyContractAmount: [],
@@ -34,7 +34,6 @@ export class ContractGeneratorComponent implements OnInit, OnDestroy {
         yearlyRiskSurcharge: [],
         yearlyStartupCosts: [],
       }),
-      colors: this.fb.array(['red', 'green', 'blue']),
     });
   }
 

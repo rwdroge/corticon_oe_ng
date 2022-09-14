@@ -1,3 +1,3 @@
-# user-registration-with-fgd-bvrhby
+# contractgenerator-oe-corticon
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/user-registration-with-fgd-bvrhby)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/contractgenerator-oe-corticon)
