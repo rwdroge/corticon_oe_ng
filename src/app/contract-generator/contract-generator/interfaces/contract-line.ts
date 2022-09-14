@@ -1,0 +1,11 @@
+export interface ContractLine {
+  ITEM: string;
+  PRICE: number;
+  QUANTITY: number;
+  YEARLYCONTRACTAMOUNT: number;
+  YEARLYMAINTENANCEAMOUNT: number;
+  YEARLYRENTALAMOUNT: number;
+  YEARLYRENTINCLMAINTENANCE: number;
+  YEARLYRISKSURCHARGE: number;
+  YEARLYSTARTUPCOSTS: number;
+}

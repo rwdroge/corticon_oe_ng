@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormGroupDirective } from '@angular/forms';
-import { ItemService } from '../../../item.service';
-import { Item } from '../../item';
+import { ItemService } from '../services/item.service';
+import { Item } from '../interfaces/item';
 @Component({
   selector: 'app-contractline',
   templateUrl: './contractline.component.html',

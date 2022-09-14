@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ContractGeneratorComponent } from './contract-generator/contract-generator.component';
 import { ContractLineComponent } from './contract-generator/contractline/contractline.component';
 import { ColorsComponent } from './contract-generator/colors/colors.component';
-import { BasicInfoComponent } from './contract-generator/basic-info/basic-info.component';
+import { ContractComponent } from './contract-generator/contract/contract.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
-import { ItemService } from '../item.service';
+import { ItemService } from './contract-generator/services/item.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     ContractGeneratorComponent,
     ContractLineComponent,
-    BasicInfoComponent,
+    ContractComponent,
     ColorsComponent,
   ],
   exports: [ContractGeneratorComponent],
